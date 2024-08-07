@@ -1198,10 +1198,10 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
-yarn-upgrade-all@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.npmjs.org/yarn-upgrade-all/-/yarn-upgrade-all-0.7.2.tgz#5d2afa9230661c55f22d3f848f22258db732ae20"
-  integrity sha512-iVxmoBuNdpxeahAIehJ039Pp6S8zQ/qTENQRMV5hp7x/2tLGUzytCODIKZFjfUwcRRKT3boGgHheUEWC7+VlQw==
+yarn-upgrade-all@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.npmjs.org/yarn-upgrade-all/-/yarn-upgrade-all-0.7.3.tgz#93687eed91b0d06516392af64be393da682977d2"
+  integrity sha512-nZISZb3Vw8EwY8PRo+CM3IvmEaiift9IRH2l5nBj9nNdLHIz1BffTSVWxuH625w/Y3rkHb8+gyz4IbdrYTMvDw==
 
 yocto-queue@^0.1.0:
   version "0.1.0"
