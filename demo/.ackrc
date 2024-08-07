@@ -1,2 +1,3 @@
 --ignore-dir=venv
 --ignore-dir=__pycache__
+--ignore_dir=.pytest_cache

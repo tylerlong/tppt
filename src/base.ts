@@ -7,12 +7,14 @@ export const base = async () => {
   ensure(
     '.gitignore',
     `venv/
-__pycache__/`,
+__pycache__/
+.pytest_cache/`,
   );
   ensure(
     '.ackrc',
     `--ignore-dir=venv
---ignore-dir=__pycache__`,
+--ignore-dir=__pycache__
+--ignore_dir=.pytest_cache`,
   );
   ensure('README.md', '# Untitled App');
   ensure('requirements.txt', 'pytest');
