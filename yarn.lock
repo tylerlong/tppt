@@ -441,11 +441,6 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dotenv-override-true@^6.2.2:
-  version "6.2.2"
-  resolved "https://registry.npmjs.org/dotenv-override-true/-/dotenv-override-true-6.2.2.tgz#b93d1e38b651566acd58c0668115fcf56cb2e51b"
-  integrity sha512-a8jtuLPLBl6rCWRfGJe+9iNdh0qqU/4b7IZBvzPYlOEx9vCBSF2Mak4xz5J9aX6GzCkIlCHUlTZW4Im+MIJx1g==
-
 esbuild@~0.21.5:
   version "0.21.5"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.21.5.tgz#9ca301b120922959b766360d8ac830da0d02997d"
