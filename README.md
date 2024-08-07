@@ -1,4 +1,4 @@
-# Tyler Python Project Template
+# Tyler Python Project Templates
 
 ## Install
 

@@ -1,12 +1,17 @@
 {
-  "name": "untitled-app",
+  "name": "tppt",
   "version": "0.1.0",
-  "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "bin": {
+    "tppt": "./lib/index.js"
+  },
   "scripts": {
-    "demo": "tsx -r dotenv-override-true/config src/demo.ts",
     "lint": "tsc --noEmit --target ESNext --moduleResolution NodeNext --module NodeNext ./src/*.ts && eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
-    "test": "vitest run"
+    "prepublishOnly": "rm -rf lib && tsc src/index.ts --outDir lib",
+    "test": "rm -rf demo && mkdir demo && cd demo && tsx ../src/index.ts"
+  },
+  "dependencies": {
+    "shell-commands": "^0.4.1"
   },
   "devDependencies": {
     "@types/node": "^22.1.0",
@@ -22,7 +27,6 @@
     "tsx": "^4.16.5",
     "ttpt": "^0.10.2",
     "typescript": "^5.5.4",
-    "vitest": "^2.0.5",
     "yarn-upgrade-all": "^0.7.2"
   },
   "yarn-upgrade-all": {

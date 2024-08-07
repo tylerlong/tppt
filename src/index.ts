@@ -1,3 +1,6 @@
-const add = (a: number, b: number): number => a + b;
+import { base } from './base';
 
-export default add;
+const main = async () => {
+  await base();
+};
+main();
