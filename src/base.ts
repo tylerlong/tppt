@@ -18,8 +18,8 @@ __pycache__/
     `
 --ignore-dir=venv
 --ignore-dir=__pycache__
---ignore_dir=.pytest_cache
---ignore_dir=.ruff_cache
+--ignore-dir=.pytest_cache
+--ignore-dir=.ruff_cache
 `,
   );
   ensure('README.md', '# Untitled App');
