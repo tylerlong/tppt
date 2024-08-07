@@ -1,5 +1,5 @@
 import { run } from 'shell-commands';
-import { Red } from 'color-loggers';
+import { Yellow } from 'color-loggers';
 
 import { ensure } from './utils';
 
@@ -15,11 +15,12 @@ __pycache__/`,
 --ignore-dir=__pycache__`,
   );
   ensure('README.md', '# Untitled App');
+  ensure('requirements.txt', 'pytest');
   await run(`
     python3 -m venv venv
     source venv/bin/activate
     pip install --upgrade pip
-    pip install pytest
+    pip install -r requirements.txt
   `);
   ensure(
     'index.py',
@@ -38,6 +39,6 @@ def test_add():
     `,
   );
 
-  const important = new Red('[IMPORTANT]: ');
-  important.log('Remember to activate the virtual environment with `source venv/bin/activate`');
+  const important = new Yellow('❗️[IMPORTANT]: ');
+  important.log("Don't forget to run `source venv/bin/activate`");
 };
