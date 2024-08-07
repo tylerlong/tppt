@@ -12,4 +12,8 @@ yarn global add tppt
 mkdir my_python_project
 cd my_python_project
 tppt
+source venv/bin/activate
 ```
+
+You will have a ready to go python project.
+Run the unit test with command `pytest`.

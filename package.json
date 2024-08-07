@@ -11,6 +11,7 @@
     "test": "rm -rf demo && mkdir demo && cd demo && tsx ../src/index.ts"
   },
   "dependencies": {
+    "color-loggers": "^0.3.1",
     "shell-commands": "^0.4.1"
   },
   "devDependencies": {
