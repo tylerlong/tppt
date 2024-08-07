@@ -6,15 +6,21 @@ import { ensure } from './utils';
 export const base = async () => {
   ensure(
     '.gitignore',
-    `venv/
+    `
+venv/
 __pycache__/
-.pytest_cache/`,
+.pytest_cache/
+.ruff_cache/
+`,
   );
   ensure(
     '.ackrc',
-    `--ignore-dir=venv
+    `
+--ignore-dir=venv
 --ignore-dir=__pycache__
---ignore_dir=.pytest_cache`,
+--ignore_dir=.pytest_cache
+--ignore_dir=.ruff_cache
+`,
   );
   ensure('README.md', '# Untitled App');
   ensure(
