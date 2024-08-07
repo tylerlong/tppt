@@ -17,7 +17,20 @@ __pycache__/
 --ignore_dir=.pytest_cache`,
   );
   ensure('README.md', '# Untitled App');
-  ensure('requirements.txt', 'pytest');
+  ensure(
+    'requirements.txt',
+    `
+pytest
+ruff
+`,
+  );
+  ensure(
+    'ruff.toml',
+    `
+[format]
+quote-style = "single"
+    `,
+  );
   await run(`
     python3 -m venv venv
     source venv/bin/activate
@@ -36,10 +49,13 @@ def add(a: int, b: int) -> int:
     `
 from index import add
 
+
 def test_add():
     assert add(1, 2) == 3
     `,
   );
+
+  await run('ruff format');
 
   const important = new Yellow('❗️[IMPORTANT]: ');
   important.log("Don't forget to run `source venv/bin/activate`");
