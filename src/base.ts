@@ -7,7 +7,7 @@ export const base = async () => {
   ensure(
     '.gitignore',
     `
-venv/
+.venv/
 __pycache__/
 .pytest_cache/
 .ruff_cache/
@@ -16,7 +16,7 @@ __pycache__/
   ensure(
     '.ackrc',
     `
---ignore-dir=venv
+--ignore-dir=.venv
 --ignore-dir=__pycache__
 --ignore-dir=.pytest_cache
 --ignore-dir=.ruff_cache
@@ -38,8 +38,8 @@ quote-style = "single"
     `,
   );
   await run(`
-    python3 -m venv venv
-    source venv/bin/activate
+    python3 -m venv .venv
+    source .venv/bin/activate
     pip install --upgrade pip
     pip install -r requirements.txt
   `);
@@ -64,5 +64,5 @@ def test_add():
   await run('ruff format');
 
   const important = new Yellow('❗️[IMPORTANT]: ');
-  important.log("Don't forget to run `source venv/bin/activate`");
+  important.log("Don't forget to run `source .venv/bin/activate`");
 };
