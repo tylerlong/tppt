@@ -88,7 +88,8 @@ def test_add():
     "."
   ],
   "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true
+  "python.testing.pytestEnabled": true,
+  "editor.inlayHints.enabled": "offUnlessPressed"
 }
     `,
   );
