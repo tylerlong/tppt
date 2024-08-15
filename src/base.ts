@@ -85,7 +85,7 @@ def test_add():
   "python.analysis.typeCheckingMode": "strict",
   "python.analysis.userFileIndexingLimit": -1,
   "python.testing.pytestArgs": [
-    "."
+    "-s", "."
   ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
