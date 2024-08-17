@@ -22,10 +22,32 @@ __pycache__/
 --ignore-dir=.ruff_cache
 `,
   );
-  ensure('README.md', '# Untitled App');
   ensure(
-    'requirements.txt',
+    'README.md',
     `
+# Untitled App
+
+## Manage dependencies
+
+### Upgrade all
+
+\`\`\`zsh
+pip-compile --upgrade
+\`\`\`
+
+### Add/remove a dependency
+
+Edit \`requirements.in\` and run the following command:
+
+\`\`\`zsh
+pip-compile && pip-sync
+\`\`\`
+`,
+  );
+  ensure(
+    'requirements.in',
+    `
+pip-tools
 pytest
 ruff
 `,
@@ -40,8 +62,8 @@ quote-style = "single"
   await run(`
     python3 -m venv .venv
     source .venv/bin/activate
-    pip install --upgrade pip
-    pip install -r requirements.txt
+    pip install --upgrade pip pip-tools
+    pip-compile && pip-sync
   `);
   ensure(
     'index.py',
