@@ -82,7 +82,7 @@ def test_add():
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.typeCheckingMode": "basic",
   "python.analysis.userFileIndexingLimit": -1,
   "python.testing.pytestArgs": [
     "-s", "."
